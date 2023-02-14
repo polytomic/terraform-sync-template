@@ -16,6 +16,10 @@ jobs:
         uses: polytomic/terraform-export-gh-action@v0.0.2
         with:
           api_key: ${{ env.POLYTOMIC_API_KEY }}
+
+      # Create a pull request with the changes.
+      # Comment this step out if you want to commit the changes directly to the default branch.
+      # See the "Commit changes" step below.
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
@@ -28,3 +32,9 @@ jobs:
           # It will be created if it doesn't already exist.
           # The default value is "polytomic-terraform".
           branch: polytomic-terraform
+
+      # Uncomment the following steps if you want to commit the changes directly to the default branch.
+      # Comment out the "Create Pull Request" step above.
+      # This will commit the changes directly to the default branch. Use with caution.
+      # - name: Commit changes
+      #   uses: EndBug/add-and-commit@v9
