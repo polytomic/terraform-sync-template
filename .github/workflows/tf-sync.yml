@@ -12,8 +12,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Create output directory
+        run: |
+          mkdir -p terraform
       - name: Polytomic Terraform Sync
-        uses: polytomic/terraform-export-gh-action@v0.0.2
+        uses: polytomic/terraform-export-gh-action@v0.0.3
         with:
           api_key: ${{ env.POLYTOMIC_API_KEY }}
 
