@@ -16,7 +16,7 @@ jobs:
         run: |
           mkdir -p terraform
       - name: Polytomic Terraform Sync
-        uses: polytomic/terraform-export-gh-action@v0.0.8
+        uses: polytomic/terraform-export-gh-action@v0.0.9
         with:
           api_key: ${{ env.POLYTOMIC_API_KEY }}
 
