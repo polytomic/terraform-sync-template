@@ -24,7 +24,7 @@ jobs:
       # Comment this step out if you want to commit the changes directly to the default branch.
       # See the "Commit changes" step below.
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v6
         with:
           commit-message: Sync terraform
           title: Polytomic Terraform Sync
